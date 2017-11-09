@@ -18,7 +18,7 @@
 
     </div>
 </nav>
-<p>Artists</p>
+<p>Artist</p>
 <ul>
     {% for album in all_albums %}
     <li><a href="{% url 'detail' album.id  %}">{{ album.artist }}</a></li>
