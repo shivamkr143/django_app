@@ -1,0 +1,28 @@
+
+<html>
+<head>
+    <style>
+        body{
+            background-image: url("https://wallpaperbrowse.com/media/images/White-Background-9B1.jpg");
+                  }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a navbar-brand href="{%url 'index' %}">Shiva</a>
+
+        </div>
+
+    </div>
+</nav>
+<p>Artists</p>
+<ul>
+    {% for album in all_albums %}
+    <li><a href="{% url 'detail' album.id  %}">{{ album.artist }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
